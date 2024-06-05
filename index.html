@@ -28,6 +28,13 @@
         #myCarousel .carousel-inner .item img:nth-child(1){display: block;}
         #myCarousel .carousel-inner .item img:nth-child(2){display: none;}
 
+        .carousel-caption{
+            position: absolute;
+            left: 30px;
+            bottom: 250px;
+            text-align: left;
+        }
+
         /*navigation*/
         .navbar {
             margin-bottom: 0;
@@ -72,12 +79,7 @@
         }
 
 
-        .carousel-caption{
-            position: absolute;
-            left: 30px;
-            bottom: 250px;
-            text-align: left;
-        }
+
 
         /*best Kia*/
         #bestKia h3{
@@ -89,12 +91,12 @@
             border: 1px solid #ddd;
             border-radius: 10px;
             padding: 20px; /*여백을 줘야함*/
-            
+            margin: 10px 0px;
         }
-        /*최근출시 박스*/
+        /*최근출시 자동차 박스*/
         #bestKia .nav-tabs{
-            margin-bottom: 50px;
-            padding-left: 35%;
+            margin: 40px auto 70px;
+            
         }
         /*최근출시 text*/
         #bestKia .nav-tabs li a{
@@ -110,11 +112,15 @@
             경우에 따라서 클래스를 추가하여 추가한 클래스를 다이렉트로 찾아서 할 수도 있음*/
         }
 
+
+        
         /*Top1,2,3*/
         #bestKia .box .badge{
             float: right;
             font-size: 15px;
+            text-align: center;
             width: 70px;
+            height: 25px;
             background-color: black;
         }
 
@@ -193,6 +199,10 @@
             padding-top: 90px;
             }
 
+        #etc .col-sm-3{
+            padding-bottom: 10px;
+        }
+        
         #etc .box img:nth-child(1){display: inline;}
         #etc .box img:nth-child(2){display: none;}
         #etc .box div{display: none;}
@@ -261,15 +271,45 @@
             font-size: 15px;
             font-family: "Nanum Gothic Coding", monospace;
         }
+
+        
         /*footer1*/
         #footer1{
             background-color: #05141F;
-            height: 200px;
+        }
+        #footer1 .col-sm-12{
+            width: 200px;
+            padding: 50px 40px ;
+        }
+        #footer1 .col-sm-3{
+            color: white;
+            padding: 0;
+        }
+        #footer1 .col-sm-3:nth-child(1){
+            padding: 0;
+            margin-right: 100px;
+        }
+        #footer1 .col-sm-3:nth-child(2){
+            color: #52595f;
+            padding: 0;
+        }
+        #footer1 .col-sm-3:nth-child(1) li{
+            padding-bottom: 20px;
+        }
+        #footer1 .col-sm-3:nth-child(2) li{
+            padding-bottom: 8px;
+        }
+        #footer1 .col-sm-3 li:nth-child(6){
+            padding-top: 10px;
+        }
+        #footer1 .col-sm-3 li img{
+            padding-right: 10px;
         }
         /*기아 멤버스 sns 버튼*/
         #footer1 .col-sm-6 ul{
             position: absolute;
             right: 0;
+            padding: 0;
         }
         /*.col-sm-6 ul 부모, 여기에도 포지션이 있을 수 있음*/
         /*ul 자식부터 변경해서 적용이 되는지 확인*/
@@ -282,7 +322,40 @@
             display: inline-block; /*박스를 주고 줄이 바뀌지 않음*/
             padding: 10px; /*a 박스에 여백을 줌*/
         }
+
+
+
         /*한국 박스 자리 위치 조절하기*/
+        #footer1 .kor {
+            float: right;
+            font-size: 17px;
+            padding-top: 60px;
+        }
+        #footer1 .kor a{
+            color: white;
+            padding-right: 40px;
+        }
+        #footer1 .kor img{
+            padding-right: 10px;
+        }
+        #footer1 .kor .dropup{
+            float: right;
+        }
+        #footer1 .kor .btn{
+            width: 200px;
+            text-align: left;
+            color: white;
+            background-color: #010e18;
+            border: none;
+            border-radius: 0;
+            padding: 10px;
+            padding-left: 20px;
+        }
+        #footer1 .kor .btn{
+            background-color: #010e18;
+        }
+
+
 
         /*footer2*/
         #footer2{
@@ -309,6 +382,7 @@
 
         /*collapsible*/
         #collapse{display: none;}
+        
 
 
         
@@ -316,55 +390,83 @@
 
         /*미디어 쿼리, max 이하 표시*/
         @media screen and (max-width: 767px){
-        /*캐러셀 이미지 pc,mo 변환*/
-        #myCarousel .carousel-inner .item img:nth-child(1){display: none;}
-        #myCarousel .carousel-inner .item img:nth-child(2){display: block;}
-        /*뉴스 이미지 pc,mo 변환*/
-        #news .col-sm-6 img:nth-child(1){display: none;}
-        #news .col-sm-6 img:nth-child(2){display: block;}
-        /*뉴스 텍스트 바탕 꽉채우기*/
-        #news .col-sm-4{padding-top: 50px; padding-bottom: 20px;}
-        /*footer 안보이게 하기*/
-        #footer1 .col-sm-6{display: none;}/*sns이미지*/
-        #footer1 .col-sm-3:nth-child(2){display: none;}/*newkia,공지사항등*/
-        /*footer 글자크기 조절*/
-        #footer2 .col-sm-2 li{font-size: 10px;}
-        #footer2 .container .row:nth-of-type(3){display: none;}
-            /*nth-of-type 또는 nth-child를 사용해서 찾기*/
-        /*callapse*/
-        #collapse{display: block;}/*콜랩스 mo에서만 보이게 하기*/
-        #collapse .collapsible {
-            background-color: #777;
-            color: white;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-        }
-        #collapse .active, #collapse  .collapsible:hover {
-            background-color: #555;
-        }
-        #collapse .collapsible:after {
-            content: '\002B';
-            color: white;
-            font-weight: bold;
-            float: right;
-            margin-left: 5px;
-        }
-        #collapse .active:after {
-        content: "\2212";
-        }
-        #collapse .content {
-            padding: 0 18px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-            background-color: #f1f1f1;
-        }
+            /*캐러셀 이미지 pc,mo 변환*/
+            #myCarousel .carousel-inner .item img:nth-child(1){display: none;}
+            #myCarousel .carousel-inner .item img:nth-child(2){display: block;}
+            /*뉴스 이미지 pc,mo 변환*/
+            #news .col-sm-6 img:nth-child(1){display: none;}
+            #news .col-sm-6 img:nth-child(2){display: block;}
+            /*뉴스 텍스트 바탕 꽉채우기*/
+            #news .col-sm-4{padding-top: 50px; padding-bottom: 20px;}
 
+            /*footer1*/
+            #footer1{padding: 0; margin: 0; color: white;}
+            #footer1 .col-sm-12{
+                padding: 30px 0px;
+                padding-left: 20px;
+                width: 100px;
+            }
+            /*안보이게 하기*/
+            #footer1 .col-sm-6{display: none;}/*sns이미지*/
+            #footer1 .col-sm-3:nth-child(2){display: none;}/*newkia,공지사항등*/
+
+            /*판매 네트워크 등*/
+            #footer1 .col-sm-3:nth-child(1){
+                padding: 0;
+                margin-left: -20px;
+                padding-bottom: 0px;
+                box-sizing: border-box;
+                background-color: red;
+            }
+
+            /*footer2*/
+            #footer2{
+                padding: 0;
+                margin: 0;
+                background-color: #05141F;
+                color: white;
+            }
+            /*글자크기 조절*/
+            #footer2 .col-sm-2 li{font-size: 10px;}
+            #footer2 .container .row:nth-of-type(3){display: none;}
+                /*nth-of-type 또는 nth-child를 사용해서 찾기*/
+            
+            /*callapse*/
+            #collapse{
+                display: block;
+                margin-left: -10px;
+            }/*콜랩스 mo에서만 보이게 하기*/
+            #collapse .collapsible {
+                background-color: #05141F;
+                color: white;
+                cursor: pointer;
+                padding: 18px;
+                width: 100%;
+                border: none;
+                text-align: left;
+                outline: none;
+                font-size: 14px;
+            }
+            #collapse .active, #collapse  .collapsible:hover {
+                background-color: #05141F;
+            }
+            #collapse .collapsible:after {
+                content: '\002B';
+                color: white;
+                font-weight: bold;
+                float: right;
+                margin-left: 5px;
+            }
+            #collapse .active:after {
+            content: "\2212";
+            }
+            #collapse .content {
+                padding: 0 18px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.2s ease-out;
+                background-color: #05141F;
+            }
         } /*데스크탑과 모바일이 많이 다를때는 각 버전별로 따로 코딩함*/
 
             
@@ -584,7 +686,8 @@
                                 <div class="col-sm-4">옵션(2)</div>
                                 <div class="col-sm-8">
                                     빌트인 캠<br>
-                                    와이드 선루프
+                                    와이드 선루프<br>
+                                    <br>
                                 </div>
                             </div> 
                             <hr> 
@@ -711,7 +814,7 @@
         <div class="container">
             <div class="row"><!-- 새 grid마다 항상 새 row를 해줘야함 -->
                 <div class="col-sm-12"><!-- div만해도 다 차지함 -->
-                    <img src="img/logo_w.svg" alt="kia로고" width="100px">
+                    <img src="img/logo_w.svg" alt="kia로고">
                 </div>
             </div>
             <div class="row">
@@ -722,7 +825,7 @@
                         <li>구매 상담 신청</li>
                         <li>시승 신청</li>
                         <li>기아렌터카</li>
-                        <li>홈</li>
+                        <li><img src="img/icon_home_1.svg" alt="home">홈</li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
@@ -752,11 +855,10 @@
                             <a href="#"><img src="img/ic_youtube.svg" alt="Youtube"></a>
                         </li>
                     </ul>
-
-                    <div>
-                        <div>한국</div>
+                    <div class="kor">
+                        <a href="#"><img src="img/global_footer_kor.svg" alt="kor">한국</a>
                         <div class="dropup">
-                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Dropup Example
+                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Family Site
                             <span class="caret"></span></button>
                             <ul class="dropdown-menu">
                               <li><a href="#">현대자동차그룹</a></li>
@@ -775,52 +877,6 @@
     <!-- footer 2 ----------------------------------------------------------------->
     <div id="footer2" class="container-fluid">
         <div class="container">
-            <!-- 아코디언 ------------------->
-            <!-- <div class="panel-group" id="accordion">
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-                      Collapsible Group 1</a>
-                    </h4>
-                  </div>
-                  <div id="collapse1" class="panel-collapse collapse in">
-                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.</div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-                      Collapsible Group 2</a>
-                    </h4>
-                  </div>
-                  <div id="collapse2" class="panel-collapse collapse">
-                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.</div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading">
-                    <h4 class="panel-title">
-                      <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-                      Collapsible Group 3</a>
-                    </h4>
-                  </div>
-                  <div id="collapse3" class="panel-collapse collapse">
-                    <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.</div>
-                  </div>
-                </div>
-              </div> -->
-
             <!-- collapsible --------------->
             <div id="collapse">
                 <button class="collapsible">SMS</button>
